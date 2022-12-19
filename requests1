@@ -1,0 +1,14 @@
+import requests
+
+with open('text2.txt') as t:
+    file = t.readline().strip()
+    r = requests.get(file).text
+    while True:
+        if r.startswith('We'):
+            print(r)
+            break
+        else:
+            file = 'https://stepic.org/media/attachments/course67/3.6.3/' + r
+            r = requests.get(file).text
+
+
