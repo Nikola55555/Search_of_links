@@ -10,5 +10,5 @@ with open('text2.txt') as t:
         else:
             file = 'https://stepic.org/media/attachments/course67/3.6.3/' + r
             r = requests.get(file).text
-
+# Поиск файла с началом строки 'We'
 
